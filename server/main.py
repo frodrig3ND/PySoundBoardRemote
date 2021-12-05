@@ -13,6 +13,7 @@ from pydantic import BaseModel
 
 from fastapi_crudrouter import SQLAlchemyCRUDRouter
 
+import uvicorn
 
 app = FastAPI()
 
@@ -175,4 +176,5 @@ async def websocket_endpoint(websocket: WebSocket):
                     keyboard.press(KeyCode.from_vk(NUMPAD_VK[n]))
                     keyboard.release(KeyCode.from_vk(NUMPAD_VK[n]))
 
-        await websocket.send_text(f"Message text was: {data}")
+if __name__ == '__main__':
+    uvicorn.run(app, host='0.0.0.0')
