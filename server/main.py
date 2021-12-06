@@ -97,7 +97,7 @@ html = """
 </html>
 """
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
+SQLALCHEMY_DATABASE_URL = "sqlite:///D:/DevCode/PySoundBoardRemote/sql_app.db"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
@@ -175,6 +175,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 for n in data:
                     keyboard.press(KeyCode.from_vk(NUMPAD_VK[n]))
                     keyboard.release(KeyCode.from_vk(NUMPAD_VK[n]))
+
 
 if __name__ == '__main__':
     uvicorn.run(app, host='0.0.0.0')

@@ -3,7 +3,7 @@
 Quick and dirty websocket service based on FastAPI and associated vue frontend.
 Set up button grid so send hotkeys to host PC.
 
-Set up to work with SounPad running on host PC.
+Set up to work with SoundPad running on host PC.
 
 SoundPad is set up to allow for Ctrl-Alt-Numpad keys.
 Frontend sends the num to be used in the hotkey.
