@@ -22,3 +22,9 @@ to run webserver
 ```java
 npm run serve
 ```
+
+For host computer can convert to an exe file with
+
+```bash
+pyinstaller --onefile --icon=icon.ico server/main.py
+```
